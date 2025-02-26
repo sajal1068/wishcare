@@ -149,24 +149,44 @@
   }
   ul.footer-links li{
     position: relative;
-    padding: 0 0 5px 0;
-    transition: padding-left 0.3sease;
+    padding: 0 0 5px 15px;
+    transition: padding-left 0.3s ease;
+    margin-bottom: 5px;
   }
-  ul.footer-links li::after{
-    position: absolute;
-    padding: 0 0 5px 0;
-    content: '';
-  }
+  ul.footer-links li:hover{
+    padding-left: 24px;
+    transition: all 0.3s;
+    color: var(--lightBlue);
+ }
+
   ul.footer-links li a{
     text-decoration: none;
     color: var(--textGray);
     font-weight: 300;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
   }
   ul.footer-links li a:hover{
     text-decoration: none;
     color: var(--textGray);
     font-weight: 300;
+    transition: all 0.3s ease;
+    color: var(--lightBlue);
   }
+  ul.footer-links li::after{
+    content: ">";
+    color: var(--textGray);
+    font-weight: 400;
+    position: absolute;
+    left: 0px;
+    transition: all 0.3s ease;
+  }
+  ul.footer-links li:hover::after{
+    padding-left: 5px;
+    transition: all 0.3s ease;
+    color: var(--textGray);
+    color: var(--lightBlue);
+ }
   .copyright-section{
     width: 100%;
     background-color: var(--copyright);
