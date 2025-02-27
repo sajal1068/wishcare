@@ -261,6 +261,20 @@
     color: var(--blue);
     margin-bottom: 25px;
     font-weight: bold;
+    
+  }
+
+  .underline{
+    position: relative;
+  }
+  .underline::after{
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 3px;
+    top:100%;
+    left: 0;
+    background: var(--blue);
   }
   .objectBox{
     width: 100%;
@@ -600,3 +614,187 @@
   .slide-containe .slide-content { margin: 0 10px; }
   .slide-containe .swiper-navBtn { display: none !important; }
 }
+
+
+
+.mission{
+  position: relative;
+  min-height: 100px;
+  background: #fffcf5;
+  display: flex;
+  align-items: center;
+  padding: 25px 15px;
+}
+
+.mission p{
+  padding: 0 15px;
+}
+.mission::after{
+  position: absolute;
+  content: '';
+  width: 8px;
+  height: 100%;
+  background: #ffa910;
+  right: 0;
+  top:0;
+}
+.vision {
+  position: relative;
+  min-height: 100px;
+  background: #f6fcff;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  line-height: 1.7;
+}
+.vision p{
+  padding: 0 15px;
+  order: 1; 
+  line-height: 1.5;
+}
+.vision::after{
+  position: absolute;
+  content: '';
+  width: 8px;
+  height: 100%;
+  background: #1b97e2;
+  right: 0;
+  top:0;
+}
+
+/* Navigation */
+
+@media (min-width: 1200px) {
+
+
+  .navbar{
+    padding: 0;
+  }
+
+  .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: var(--blue);   
+}
+  .navbar-nav li.active{   
+    color:#fff;
+  }	
+ 
+  .navbar-nav .nav-link{ 
+    font-weight: 600;  
+    padding: 0.99rem 1.5rem!important;   
+  }
+
+  .navbar-expand-lg .navbar-nav .dropdown-menu {    
+    min-width: calc(100% - 1px);           
+  }
+ 
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+    /* background: #022759; */
+    /* color:#fff; */
+    padding: 0;
+    border-radius: 0;   
+    /* border-top: solid 2px var(--blue); */
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    margin-top: 10px; /* Adjust spacing as needed */
+  }
+
+  .dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -10px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgba(0, 0, 0, 0.15); /* Match dropdown border */
+}
+  a.dropdown-item{
+    /* color:#fff; */
+    padding: .65rem 1.5rem;
+    border-bottom:solid #615f5f 0.25px;
+  }
+  .dropdown-item:focus, .dropdown-item:hover {
+    /* color: #fff; */
+    text-decoration: none;    
+  }
+  .dropdown-menu a.dropdown-item:last-child{
+    border-bottom:solid 1px #ebe9e9;
+  } 
+  .navbar-nav li:first-child{
+    margin-left:0;
+  } 
+  .dropdown .dropdown-menu {
+    transition: all 0.5s;
+    /* overflow: hidden; */
+    transform-origin: top center;
+    transform: scale(1, 0);
+    display: block;
+    border-top:solid 4px var(--olive)!important;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+            margin-top: 10px; /* Adjust spacing as needed */
+  }
+  .dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -15px; /* Adjust as needed */
+    left: 41%; /* Adjust as needed */
+    
+    margin: auto;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid var(--olive); /* Match dropdown border */
+}
+
+  .dropdown:hover .dropdown-menu {
+    transform: scale(1);
+  }
+  .dropdown-item.active, .dropdown-item:active {
+      color: var(--bs-dropdown-link-active-color);
+      text-decoration: none;
+      background-color: var(--navbarActive);
+  }
+  .nav-link:focus, .nav-link:hover {
+    background-color: var(--navbarActive);
+   }
+   li.nav-item::after {
+      content: '';
+      height: 100%;
+      width: 1px;
+      background: #fff;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    
+    .nav-link {
+      padding: 0 15px;
+    }
+
+    .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0; /* Important for smooth transition */
+      animation: fadeIn 0.3s ease-in-out forwards; /* Add fade-in animation */
+    }
+    
+    @keyframes fadeIn {
+      from {
+          opacity: 0;
+          transform: translateY(-10px); /* Optional: slight upward movement */
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+    }
+    
+    .navbar-nav .nav-item.dropdown .dropdown-menu {
+      display: none; /* Hide by default */
+      border: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
+    }
+    
+
+}
+
+
+/* Navigation */
