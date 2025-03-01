@@ -50,6 +50,7 @@
      --olive:#86C305;
      --gray:#555555;
      --lightBlue:#0D6EFD;
+     --lightGray:#f6f6f6;
   }
 
   body {
@@ -1012,6 +1013,241 @@
   line-height: 1.3;
   padding: 10px 5px;
 
+}
+
+/* FAQs */
+
+.containerBox {
+  background-color: white;
+  color: black; 
+  margin: 20px 0;
+  border: solid 1px #e0e0e0;
+  border-radius: 3px;
+}
+
+.question {
+  font-size: 0.99rem;
+  font-weight: 600;
+  padding: 20px 80px 20px 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--blue);
+}
+.question::before{
+  content: '';
+  position: absolute;
+  right: 11px;
+  width: 35px;
+  height: 35px;
+  border-radius: 3px;
+  background-color: #86c305;
+  text-align: center;
+}
+.question::after {
+  content: "\002B";
+  font-size: 1.52rem;
+  position: absolute;
+  right: 20px;
+  transition: 0.2s;
+  color: #f1f1f1;
+  font-weight: 400;
+}
+
+.question.active::after {
+  transform: rotate(45deg);
+}
+
+.answercont {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.answer {
+  padding: 0 20px 20px;
+  font-size: 0.92rem;
+  line-height: 1.5rem;
+  color: var(--gray);
+  
+}
+
+.question.active + .answercont {
+}
+
+.download-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* FAQs */
+
+.privacyDiv {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 15px 5px;
+  margin: 0px 0 5px;
+  border-radius: 4px;
+  background: var(--lightGray);
+}
+.privacyDiv p{
+   font-size: 0.9rem;
+   line-height: 1.6;
+   font-weight: 400;
+   color:#555555;
+}
+
+
+.privacyDiv .subHeading {
+  font-size: 1.15em;
+  padding: 10px 0;
+  font-weight: 600;
+  color: var(--blue);
+  position: relative;
+  line-height: 1;
+  margin: 0 0 15px 0;
+}
+
+.privacyDiv .subHeading::after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  width: 50px;
+  height: 3px;
+  background: var(--blue);
+  left: 0;
+}
+.imgBox {
+  padding: 10px;
+  border-radius: 8px;
+  border: solid #f4f4f4 1px;
+}
+ul.profile-details {
+  width: 100%;  
+  border: solid 1px #f4f4f4;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 15px 15px;
+}
+ul.profile-details li{
+  width: 100%;
+  border-bottom: solid #f4f4f4 1px;
+  padding: 10px 10px;
+}
+ul.profile-details li:first-child{
+  text-align: right;
+
+}
+ul.profile-details li:last-child{
+  border-bottom: 0;
+}
+ul.profile-details li strong{
+  max-width: 140px;
+  width: 100%;
+  display: inline-block;
+  color: var(--blue);
+}
+ul.profile-details li span{
+  color: var(--gray);
+  
+}
+.pad-about {
+  padding: 10px 15px;
+  border: solid 1px #f6f6f6;  
+  margin: 15px 0px;
+  border-radius: 8px;
+}
+.subHeading{
+  position: relative;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--olive);
+  line-height: 1.4;
+  margin-bottom: 25px;
+}
+.pad-about p{
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+.subHeading::after{
+  position: absolute;
+  content: '';
+  top:calc(100% + 5px);
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background:var(--olive); ;
+}
+
+
+.pillerBox{
+  width: 100%;
+  height: 250px;  
+  position: relative;
+  background: var(--white);  
+  margin: 8px 8px 23px;
+  border-radius: 12px;  
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;  
+  z-index: 1;
+}
+.bgwhite{
+  position: relative;
+  background: var(--white);
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 15px 25px;
+  border-radius: 12px;
+}
+.bgwhite img{
+  max-height: 70px;
+  fill: var(--olive);
+}
+
+.pillerBox strong{  
+  font-size: 1.15rem;
+  color: var(--blue);
+  line-height: 1.5;  
+  padding: 5px 0;
+}
+.pillerBox p{
+  font-size: 0.9rem;
+  color: #747171;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+.pillerBox::before,
+.pillerBox::after {      
+  content: '';
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background-color: var(--olive);
+  /* border-radius: 16px;  */
+  border-bottom-left-radius: 16px;
+  border-top-right-radius: 16px;
+  z-index: -1;
+}    
+.pillerBox::after {
+  top: -6px; 
+  right: -6px;  
+}    
+.pillerBox::before {
+  bottom: -6px; 
+  left: -6px;  
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {  }
