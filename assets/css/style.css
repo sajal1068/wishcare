@@ -840,12 +840,25 @@
       width: 64%; 
       text-align: left;
       font-weight: 600;
-      color: #555;    
+      color: #555;  
+      display: flex;
+      align-items: center;  
     }
     ul.infocontact li:nth-child(3){      
       flex: 1;
       position: absolute;
       right: 0;
+    }
+    .infocontact li {     
+      padding: 0 10px 0 5px;
+    }
+    ul.infocontact li svg{
+      height: 15px;
+    }
+    .infocontact li a {
+      font-size: 0.65rem;
+      color: #555555;
+      text-decoration: none;
     }
     
     .mission{
