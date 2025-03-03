@@ -772,6 +772,9 @@
     .navbar-brand svg{
       height: 14px;
     }
+    .navbar-brand img{
+      height: 70px;
+    }
 }
 @media (min-width: 576px) and (max-width: 767.98px) { 
  
@@ -825,6 +828,9 @@
   .infocontact li {   
     padding: 0 10px 0 5px;
     
+  }
+  .navbar-brand img{
+    height: 70px;
   }
   .navbar-brand svg{
     height: 20px;
