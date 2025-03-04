@@ -683,6 +683,65 @@
 /* Navigation */
 
 
+.inner-img-one {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  overflow: hidden;
+}
+.inner-img-two{
+  position: relative;
+}
+.worldRotate {
+  animation: worldRotate 20s linear infinite;
+  transform-origin: center center;
+}
+
+.borderCircle{
+  position: relative;
+}
+.inner-img-two::before{
+  position: absolute;
+  content: '"Empowering Communities, Enriching Lives"';
+  color:#ffffff;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-style: italic;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  background-color: var(--blue);
+  min-height: 50px;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  border-radius: 4px;
+}
+/* .inner-img-two::after{
+  position: absolute;
+  content: '';
+  background-image: url('../images/dotted.png');
+  width: 63px;
+  height: 58px;
+  background-size: 100%;  
+  top:-10px;
+  left:-10px;
+} */
+@keyframes worldRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
 
 /* Navigation */
 
