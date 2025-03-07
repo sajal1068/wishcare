@@ -1079,32 +1079,14 @@ a:hover, a:focus {
     }
     .mission p{
       margin-top: 15px;
-    }
-    .mission::after {
-      position: absolute;
-      content: '';
-      width: 100%;
-      height: 8px;
-      background: #ffa910;
-      left: 0;
-      top: 100%;
-    }
+    }    
     .vision{
       flex-direction: column;
       margin-bottom: 15px;
     }
     .vision p{
       margin-top: 15px;
-    }
-    .vision::after {
-      position: absolute;
-      content: '';
-      width: 100%;
-      height: 8px;
-      background: #1b97e2;
-      left: 0;
-      top: 100%;
-    }
+    }   
     .navbar-brand svg{
       height: 14px;
     }
@@ -1538,8 +1520,7 @@ ul.emaillink li{
   z-index: 99;
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  display: flex;  
   align-items: center;
   flex-direction: column;
   justify-content: center;
