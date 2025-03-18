@@ -900,12 +900,12 @@
 
 .the-fieldset {
   width: 100%;
-  border: solid var(--blue) 1px;
+  border: solid #afafaf 1px;
   border-radius: 4px;
   padding: 0px 25px 15px;
-  margin-top: 20px;
+  margin: 20px 0 35px;
   background: var(--white);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+  /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05); */
 }
 
 .the-legand {
@@ -922,7 +922,11 @@
   background: var(--blue);
   border: solid 1px var(--blue);
 }
+.formtext .form-label{
+  font-weight: 500;
+  color: var(--blue);
 
+}
 .events-schedules-table {
   padding-left: 0;
   margin-bottom: 0;
